@@ -12,12 +12,6 @@
 <body id="body">
 <div class="cursor"></div>
 
-<header class="headernew">
-  <div style="font-weight: 100!important;" class="onglet">DANNY<br>LAHCENE</div>
-  <div class="onglet">Home</div>
-  <div class="onglet">About</div>
-  <div class="onglet">Contact</div>
-</header>
 <div class="cellule grid0" >
 
   <div class="headercarre">
@@ -224,10 +218,28 @@
 
   <script>
 
-    const cursor = document.querySelector('.cursor');
 
-    document.addEventListener('mousemove', e=> {
-      cursor.setAttribute("style","top: "+(e.pageY - scrollY)+"px; left: "+(e.pageX)+"px")
+    const links = document.getElementsByTagName('a');
+    for (const link of links) {
+      link.addEventListener('mouseover', mouseOver);
+      link.addEventListener("mouseout", mouseOut);
+    }
+
+    function mouseOver() {
+      const cursorElement = document.getElementById("cursor");
+      cursorElement.classList.toggle("cursor-on-link");
+    }
+
+    function mouseOut() {
+      const cursorElement = document.getElementById("cursor");
+      cursorElement.classList.toggle("cursor-on-link");
+    }
+
+    document.addEventListener('mousemove', e => {
+      const cursor = document.getElementById("cursor");
+      // const cursorStyle = document.getElementById("cursor").style;
+      // cursorStyle.color = "green";
+      cursor.setAttribute("style", "top: " + (e.pageY - scrollY) + "px; left: " + (e.pageX) + "px")
     })
 
   </script>

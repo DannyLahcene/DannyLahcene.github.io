@@ -419,7 +419,7 @@ a{
     font-size: 8vw!important;
 }
 .grain{
-    height: 600vw;
+    height: 1300vw;
 }
 }
 
@@ -440,7 +440,8 @@ a{
     font-family: 'Raleway';
     }
 /* HEADER en S*/
-  .headernew{opacity: 0;
+  .headernew{
+      opacity: 0;
     pointer-events: none;
     font-family: 'raleway';
     color: white;
