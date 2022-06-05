@@ -272,21 +272,20 @@ img {
 }
 
 .cursor {
-    z-index: 11;    
-    /*V1:
-    ;height: 30px;
-    width: 29px;
-    background-color:white*/
+    z-index: 11;
+    transition: 100ms all ease-out;
     border-radius: 100px;
     position: fixed;
     transform: translate(-50%, -50%);
     height: 19px;
     width: 19px;
     background-color:white;
- /*   border: white solid 4px;*/
     mix-blend-mode: difference;
-    transition-timing-function: ease-out;
     pointer-events: none;
+}
+.cursor-on-link {
+    height: 40px;
+    width: 40px;
 }
 
 .headercarre{
