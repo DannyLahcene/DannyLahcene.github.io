@@ -3,8 +3,16 @@ html{
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'raleway';
+    cursor: none;
 }
-a{text-decoration: none;
+
+body{
+    height: fit-content;
+    cursor: none;
+}
+a{
+text-decoration: none;
 color: unset;
 cursor: none!important;}
 
@@ -134,10 +142,12 @@ cursor: none!important;}
     position: absolute;
     transition: all 0.4s;
     overflow: hidden;
+    opacity: 1;
+    filter:brightness(0.7);
 }
 
 .cache:hover {
-    filter: blur(300px);
+    opacity: 0.2;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -230,7 +240,7 @@ img {
 }
 
 .grain {
-    z-index: 9;
+    z-index: 3;
     pointer-events: none;
     content: "";
     width:100%;
@@ -273,20 +283,22 @@ img {
 
 .cursor {
     z-index: 11;
-    transition: 100ms all ease-out;
+    transition: 300ms all ease-out;
     border-radius: 100px;
     position: fixed;
     transform: translate(-50%, -50%);
-    height: 19px;
-    width: 19px;
-    background-color:white;
-    mix-blend-mode: difference;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+     mix-blend-mode: difference; 
     pointer-events: none;
 }
 .cursor-on-link {
-    height: 40px;
-    width: 40px;
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
 }
+
 
 .headercarre{
     height: 80px;
@@ -383,7 +395,11 @@ img {
     grid-row: -1/1!important;
     
 }*/
+.grain{
+    height: 1415vw;
 }
+}
+
 /*MEDIA QUERY S SIZE*/
 
 @media (max-width: 850px) and (min-width:360px){
@@ -466,6 +482,9 @@ img {
     grid-row: 9/10!important;
     
 }*/
+.grain{
+    height: 457vw;
+}
 }
 
 /*MEDIA QUERY M SIZE 850-1400*/
@@ -509,6 +528,9 @@ img {
     .grid12 {
         grid-column: 2/-1!important;
         grid-row: 6/7!important;
+    }
+    .grain{
+        height: 200vw;
     }
 }
 
@@ -555,5 +577,8 @@ img {
     .grid9 {
         grid-column: 3/-1!important;
         grid-row: 4/5!important;
+    }
+    .grain{
+        height: 125vw;
     }
 }

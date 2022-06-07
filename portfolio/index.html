@@ -10,7 +10,7 @@
 
 
 <body id="body">
-<div class="cursor"></div>
+  <div id="cursor" class="cursor"></div>
 
 <div class="cellule grid0" >
 
@@ -202,7 +202,7 @@
 <div class="cellule grid12">
   <div class="cache box12"></div>
   <div class="titre">
-    <div class="catégorie">STUFFS</div>
+    <div class="catégorie">STUFFS (book samira)</div>
     <div class="flexé">
       <span class="numéro">12</span>
       <div class="colomn">
@@ -212,36 +212,35 @@
     </div>
   </div>
   <img src="img/12.jpg">
+</div>
 
 
-  <div class="grain"></div>
+  <div class="grain"></div></div>
 
   <script>
 
-
-    const links = document.getElementsByTagName('a');
-    for (const link of links) {
-      link.addEventListener('mouseover', mouseOver);
-      link.addEventListener("mouseout", mouseOut);
-    }
-
-    function mouseOver() {
-      const cursorElement = document.getElementById("cursor");
-      cursorElement.classList.toggle("cursor-on-link");
-    }
-
-    function mouseOut() {
-      const cursorElement = document.getElementById("cursor");
-      cursorElement.classList.toggle("cursor-on-link");
-    }
-
-    document.addEventListener('mousemove', e => {
-      const cursor = document.getElementById("cursor");
-      // const cursorStyle = document.getElementById("cursor").style;
-      // cursorStyle.color = "green";
-      cursor.setAttribute("style", "top: " + (e.pageY - scrollY) + "px; left: " + (e.pageX) + "px")
-    })
-
+const links = document.getElementsByTagName('a');
+  for (const link of links) {
+    link.addEventListener('mouseover', mouseOver);
+    link.addEventListener("mouseout", mouseOut);
+  }
+  
+  function mouseOver() {
+    const cursorElement = document.getElementById("cursor");
+    cursorElement.classList.toggle("cursor-on-link");
+  }
+  
+  function mouseOut() {
+    const cursorElement = document.getElementById("cursor");
+    cursorElement.classList.toggle("cursor-on-link");
+  }
+  
+  document.addEventListener('mousemove', e => {
+    const cursor = document.getElementById("cursor");
+    // const cursorStyle = document.getElementById("cursor").style;
+    // cursorStyle.color = "green";
+    cursor.setAttribute("style", "top: " + (e.pageY - scrollY) + "px; left: " + (e.pageX) + "px")
+  })
   </script>
 </body>
 </html>
