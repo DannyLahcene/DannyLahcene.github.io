@@ -9,6 +9,8 @@ html{
 body{
     height: fit-content;
     cursor: none;
+    background-color: #03000b;
+    animation: 3s linear 1s infinite alternate coloring;
 }
 p{
     position: absolute;
@@ -22,6 +24,7 @@ a{
 text-decoration: none;
 color: unset;
 cursor: none!important;
+transition: 100ms all;
 }
 
 
@@ -158,7 +161,12 @@ cursor: none!important;
     overflow: hidden;
     filter:brightness(0.6);
 }
-
+video {
+    transition: all 0.5s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 img {
     transition: all 0.5s;
@@ -325,28 +333,8 @@ padding-left: 20px;
     font-size: 14px;
 }
 
-/*CURSEUR V1: 
 .cursor {
-    z-index: 11;
-    transition: 200ms all ease-out;
-    border-radius: 100px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    height: 19px;
-    width: 19px;
-    background-color:white;
-    mix-blend-mode: difference;
-    pointer-events: none;}
-
-.cursor-on-link {
-    height: 50px;
-    width: 50px;
-    color: red!important;
-  
-}*/
-/*CURSEUR V2:*/ 
-.cursor {
-    z-index: 11;
+    z-index: 5000;
     transition: 300ms all ease-out;
     border-radius: 100px;
     position: fixed;
@@ -354,7 +342,7 @@ padding-left: 20px;
     height: 30px;
     width: 30px;
     background-color: white;
-     mix-blend-mode: difference; 
+    mix-blend-mode: difference; 
     pointer-events: none;
 }
 .cursor-on-link {
@@ -376,8 +364,10 @@ padding-left: 20px;
     max-width: 90%
     }
     .miseentexte img{
-        width: 100%;
-        max-width: 400px;
+        width: 70%;
+    }
+    .miseentexte video{
+        width: 85%;
     }
     .grid2{
         overflow: scroll;
@@ -385,6 +375,10 @@ padding-left: 20px;
     .grid2::-webkit-scrollbar-thumb{
         background-color: white;
     }
+    @keyframes coloring {
+        from {background-color: #03000b;}
+        to {background-color: #0f0000;}
+      }
 
 @font-face {
     font-family: 'Raleway';

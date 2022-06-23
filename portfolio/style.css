@@ -10,14 +10,21 @@ html{
 body{
     height: fit-content;
     cursor: none;
+    background-color: #03000b;
+    user-select: none;
 }
 a{
 text-decoration: none;
 color: unset;
-cursor: none!important;}
+cursor: none!important;
+transition: all 100ms;}
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+::selection{
+    color: red;
 }
 
 .testtt {
@@ -142,7 +149,7 @@ cursor: none!important;}
     position: absolute;
     transition: all 0.4s;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0.985;
     filter:brightness(0.7);
 }
 
@@ -312,7 +319,10 @@ img {
     position: absolute;
     transition: all 100ms;
 }
-
+@keyframes coloring {
+    from {background-color: #03000b;}
+    to {background-color: #0b0000;}
+  }
 @font-face {
     font-family: 'Raleway';
     src: url('font/Raleway/Raleway-VariableFont_wght.ttf') format('truetype')
