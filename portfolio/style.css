@@ -17,7 +17,11 @@ a{
 text-decoration: none;
 color: unset;
 cursor: none!important;
-transition: all 100ms;}
+transition: all 250ms;}
+
+a:hover{
+    padding-left:25px
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -49,7 +53,7 @@ transition: all 100ms;}
 }
 .sectionB {
     z-index: 5;
-/*    margin-right: 80px;*/
+
     padding-right: 40px;
     align-items: center;
     font-family: "Raleway";
@@ -61,7 +65,7 @@ transition: all 100ms;}
 }
 .sectionB:hover {
     font-weight: 700;
-    padding-left: 80px;
+    
     color: pink;
 }
 
@@ -73,14 +77,14 @@ transition: all 100ms;}
     align-items: center;
     font-family: "Raleway";
     color: white;
-    font-weight: 700;
+    font-weight: thin;
     font-size: 18px;
     transition: 200ms ease-out;
     padding-left: 60px;
 }
 .sectionC:hover {
     font-weight: 700;
-    padding-left: 80px;
+    
     color: rgb(248, 192, 255);
 }
 
@@ -91,14 +95,14 @@ transition: all 100ms;}
     align-items: center;
     font-family: "Raleway";
     color: white;
-    font-weight: 500;
+    font-weight: thin;
     font-size: 18px;
     transition: 200ms ease-out;
     padding-left: 60px;
 }
 .sectionD:hover {
     font-weight: 700;
-    padding-left: 80px;
+    
     color: rgb(192, 193, 255);
     
 }
@@ -287,6 +291,33 @@ img {
     min-width: 96px;
 }
 
+a::before{
+    content:'▸';
+    color:white;
+    position:absolute;
+    opacity:0;
+    transition:all .2s ease-in-out;
+    transform: translateX(-20px);
+  }
+
+a:hover::before{
+opacity:1;
+}
+
+.headercarre a::before{
+    content:'▸';
+    color:white;
+    position:absolute;
+    opacity:0;
+    transition:all .2s ease-in-out;
+    transform: translateX(-20px);
+  }
+
+  .headercarre  a:hover::before{
+opacity:1;
+}*/
+
+
 .date {
     font-size: 14px;
 }
@@ -297,22 +328,28 @@ img {
     border-radius: 100px;
     position: fixed;
     transform: translate(-50%, -50%);
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     background-color: white;
+
      mix-blend-mode: difference; 
     pointer-events: none;
 }
 .cursor-on-link {
-    width: 0px;
-    height: 0px;
-    opacity: 0.5;
+    content:'▸';
+    width: 4px;
+    height: 4px;
+    opacity: 1;
+    
 }
+
+
+
 
 
 .headercarre{
     height: 80px;
-    width: 90%;
+    width: fit-content;
     left: 25px;
     bottom: 50%;
     transform: translate(0, 40px);
